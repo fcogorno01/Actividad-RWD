@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(212, 212, 212);
+    color: black;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+        "izq der";
+}
+
+h1 {
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: rgb(59, 94, 207);
+    padding: 30px;
+}
+
+.izquierda {
+    display: flex;
+    flex-direction: column;
+    grid-area: izq;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    align-content: center;
+}
+
+.derecha {
+    grid-area: der;
+    
+}
+
+.derecha img {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-family: Paytone One, sans-serif;
+    font-size: 18px;
+    padding: 0 20px 0 20px;
+}
+
+@media screen and (max-width: 950px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 40% 60%;
+        grid-template-areas:
+            "izq"
+            "der";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 0.75fr 1.25fr;
+        grid-template-areas:
+            "izq"
+            "der";
+    }
+    .izquierda {
+        padding: 50px 0 100px 0;
+    }
+    h1 {
+        font-size: 50px;
+    }
+}
+

@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(212, 212, 212);
+    color: black;
+    margin: 20px 80px 50px 80px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+        "bloque1 bloque2 bloque3";
+    gap: 80px;
+}
+
+header {
+    padding: 50px;
+}
+
+header h1 {
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: rgb(59, 94, 207);
+}
+
+.bloque1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: bloque1;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px 10px 80px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: white;
+    align-content: center;
+}
+
+.bloque1 img {
+    width: 75%;
+    height: 45%;
+}
+
+.bloque2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: bloque2;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px 10px 80px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: white;
+    align-content: center;
+}
+
+.bloque2 img {
+    width: 75%;
+    height: 45%;
+}
+
+.bloque3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: bloque3;
+    justify-content: center;
+    align-items: center;
+    padding: 0 80px 20px 80px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: white;
+    align-content: center;
+}
+
+.bloque3 img {
+    padding-top: 20px;
+    width: 75%;
+    height: 45%;
+}
+
+.btn {
+    background-color: rgb(40, 83, 224);
+    color: white;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10%;
+    margin: 50px 0 0 0;
+    height: 70px;
+    width: 300px;
+    font-family: Paytone One, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+p {
+    font-family: Paytone One, sans-serif;
+    font-size: 18px;
+    padding: 0 20px 0 20px;
+}
+
+h3 {
+    padding: 20px 20px 20px 20px;
+    font-family: Paytone One, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1500px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "bloque1"
+            "bloque2"
+            "bloque3";
+        gap: 80px;
+    }
+    main {
+        margin: 50px 300px 100px 300px;
+    }
+    .bloque1, .bloque2, .bloque3 {
+        padding: 30px 40px 20px 40px;
+    }
+    .bloque1 img, .bloque2 img, .bloque3 img {
+        height: 70%;
+        width: 50%
+    }
+    .btn {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "bloque1"
+            "bloque2"
+            "bloque3";
+        gap: 80px;
+    }
+    main {
+        margin: 50px 300px 100px 300px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .bloque1, .bloque2, .bloque3 {
+        padding: 30px 40px 20px 40px;
+    }
+    .bloque1 img, .bloque2 img, .bloque3 img {
+        height: 70%;
+        width: 50%
+    }
+    .btn {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "bloque1"
+            "bloque2"
+            "bloque3";
+        gap: 50px;
+    }
+    body {
+        padding: 0;
+    }
+    header {
+        padding: 0;
+    }
+    main {
+        margin: 50px 150px 100px 150px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .bloque1, .bloque2, .bloque3 {
+        padding: 30px 30px 10px 30px;
+    }
+    .bloque1 img, .bloque2 img, .bloque3 img {
+        height: 70%;
+        width: 50%
+    }
+    .btn {
+        margin-bottom: 50px;
+        font-size: 18px;
+        padding: 0;
+    }
+    header h1 {
+        font-size: 50px;
+    }
+}

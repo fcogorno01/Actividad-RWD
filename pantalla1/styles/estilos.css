@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../images/Home.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.25fr 0.5fr 0.11fr;
+    grid-template-areas:
+        "bloque1"
+        "bloque2"
+        "boton";
+
+}
+
+.bloque1 {
+    display: grid;
+    grid-area: bloque1;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.bloque1 h3 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.bloque2 {
+    display: grid;
+    grid-area: bloque2;
+    justify-content: start;
+    align-items: start;
+    padding: 50px;
+}
+
+.bloque2 h1 {
+    padding: 50px 0 50px 0;
+    width: 70%;
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+}
+
+.bloque2 p {
+    font-family: Paytone One, sans-serif;
+    font-size: 22px;
+}
+
+.boton {
+    display: grid;
+    grid-area: boton;
+}
+
+.btn {
+    background-color: rgb(40, 83, 224);
+    color: white;
+    padding: 20px 20px 20px 20px;
+    border-radius: 10%;
+    margin: 100px 0 50px 50px;
+    height: 70px;
+    width: 300px;
+    font-family: Paytone One, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+    .bloque2 h1 {
+        font-size: 60px;
+    }
+    .bloque2 p {
+        font-size: 20px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .bloque2 h1 {
+        font-size: 50px;
+    }
+    .bloque2 p {
+        font-size: 18px;
+    }
+    .btn {
+        font-size: 18px;
+    }
+    .bloque1 h3 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bloque2 h1 {
+        font-size: 40px;
+    }
+    .bloque2 p {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 14px;
+        width: 200px;
+        padding: 10px;
+        margin: 50px 0 50px 50px;
+        height: 40px;
+    }
+    .bloque1 h3 {
+        font-size: 24px;
+    }
+}

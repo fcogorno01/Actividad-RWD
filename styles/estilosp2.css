@@ -9,6 +9,10 @@ body {
     color: white;
 }
 
+main {
+    padding: 100px 0 100px 50px;
+}
+
 .layout {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr 0.5fr;
@@ -17,15 +21,50 @@ body {
         "bloque1 bloque2 bloque3";
 }
 
-header {
+footer {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Paytone One, sans-serif;
+    font-weight: bold;
     padding: 50px;
+    width: 100%;
+    font-size: 22px;
+}
+
+header {
+    display: flex;
+    background-color: rgba(0,0,0,0.75);
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     font-family: "Antonio", sans-serif;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 50px;
     color: rgb(59, 94, 207);
+}
+
+nav a {
+    color: rgb(59, 94, 207);
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(177, 221, 239);
+}
+
+a {
+    text-decoration: none;
 }
 
 .bloque1 {
@@ -77,6 +116,21 @@ header h1 {
 }
 
 @media screen and (max-width: 1200px) {
+    header {
+        padding: 30px 0 0 0;
+        flex-direction: column;
+    }
+    header h1 {
+        padding-bottom: 30px;
+    }
+    nav {
+        background-color: rgb(250, 245, 236);
+        padding: 20px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
     .bloque3 {
         padding: 0 80px 0 80px;
     }
@@ -114,7 +168,10 @@ header h1 {
     }
     
     header h1 {
-        font-size: 40px;
+        font-size: 30px;
+    }
+    nav a {
+        font-size: 28px;
     }
     .bloque3 {
         padding: 70px 0 50px 50px;
@@ -129,6 +186,9 @@ header h1 {
     .bloque2 {
         padding: 0 50px 0 25px;
     }
+    footer {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -142,14 +202,17 @@ header h1 {
     }
     
     header h1 {
-        font-size: 40px;
+        font-size: 26px;
+    }
+    nav a {
+        font-size: 24px;
     }
     .bloque3 {
         padding: 70px 0 50px 50px;
         width: 75%;
     }
     .bloque3 p {
-        font-size: 18px;
+        font-size: 16px;
     }
     .bloque1 {
         padding: 0 25px 0 50px;
@@ -171,14 +234,17 @@ header h1 {
     }
     
     header h1 {
-        font-size: 40px;
+        font-size: 20px;
+    }
+    nav a {
+        font-size: 18px;
     }
     .bloque3 {
         padding: 70px 0 50px 50px;
         width: 75%;
     }
     .bloque3 p {
-        font-size: 18px;
+        font-size: 14px;
     }
     .bloque1 {
         padding: 0 50px 0 50px;
@@ -197,5 +263,8 @@ header h1 {
     .bloque2 img {
         height: 100%;
         width: 90%;
+    }
+    footer {
+        font-size: 14px;
     }
 }

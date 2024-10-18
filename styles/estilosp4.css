@@ -9,12 +9,55 @@ body {
     color: black;
 }
 
+main {
+    padding: 30px;
+}
+
 .layout {
     display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 2fr;
     grid-template-areas:
         "izq der";
+}
+
+header {
+    display: flex;
+    background-color: rgba(0,0,0,0.75);
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: rgb(59, 94, 207);
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(177, 221, 239);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Paytone One, sans-serif;
+    font-weight: bold;
+    padding: 50px;
+    width: 100%;
+    font-size: 22px;
 }
 
 h1 {
@@ -77,5 +120,29 @@ p {
     h1 {
         font-size: 50px;
     }
+    footer {
+        font-size: 18px;
+    }
 }
 
+@media screen and (max-width: 400px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 2fr;
+        grid-template-rows: 0.75fr 1.25fr;
+        grid-template-areas:
+            "izq"
+            "der";
+    }
+    .izquierda {
+        padding: 50px 0 100px 0;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    nav a {
+        font-size: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(212, 212, 212);
+    color: black;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+        "izq der";
+}
+
+header {
+    display: flex;
+    background-color: rgba(0,0,0,0.75);
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    color: rgb(59, 94, 207);
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(177, 221, 239);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Paytone One, sans-serif;
+    font-weight: bold;
+    padding: 50px;
+    width: 100%;
+    font-size: 22px;
+}
+
+h1 {
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: rgb(59, 94, 207);
+    padding: 30px;
+}
+
+.bloque1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloque2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloque3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.derecha {
+    grid-area: der;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    text-align: center;
+}
+
+.img1, .img2, .img3 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.izquierda {
+    grid-area: izq;
+    
+}
+
+.izquierda img {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    font-family: Paytone One, sans-serif;
+    font-size: 18px;
+    padding: 0;
+}

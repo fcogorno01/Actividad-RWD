@@ -1,0 +1,305 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(212, 212, 212);
+    color: black;
+}
+
+main {
+    margin: 50px 100px 100px 100px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+        "bloque1 bloque2 bloque3";
+    gap: 50px;
+}
+
+header {
+    display: flex;
+    background-color: rgba(0,0,0,0.75);
+    padding: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: rgb(59, 94, 207);
+}
+
+
+nav a {
+    color: rgb(59, 94, 207);
+    font-family: "Antonio", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+nav a:hover{
+    color: rgb(177, 221, 239);
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.bloque1 {
+    display: flex;
+    flex-direction: column;
+    grid-area: bloque1;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    align-content: center;
+}
+
+.texto1, .texto2, .texto3 {
+    border-radius: 10%;
+    background-color: white;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+    margin-top: -100px;
+    z-index: -1;
+}
+
+.imagen1 {
+    width: 45%;
+    height: 55%;
+    border-radius: 50%;
+    border:solid white 20px;
+    margin-bottom: 10px;
+}
+
+.bloque2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: bloque2;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    align-content: center;
+}
+
+.imagen2 {
+    width: 45%;
+    height: 55%;
+    border-radius: 50%;
+    border:solid white 20px;
+    margin-bottom: 10px;
+}
+
+.bloque3 {
+    display: flex;
+    flex-direction: column;
+    grid-area: bloque3;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    align-content: center;
+}
+
+.imagen3 {
+    width: 45%;
+    height: 55%;
+    border-radius: 50%;
+    border:solid white 20px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: transparent;
+    color: black;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10%;
+    border: transparent;
+    height: 70px;
+    width: 300px;
+    font-family: Paytone One, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    align-content: center;
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.75);
+    color: rgba(255, 255, 255, 0.75);
+    font-family: Paytone One, sans-serif;
+    font-weight: bold;
+    padding: 50px;
+    width: 100%;
+    font-size: 22px;
+}
+
+p {
+    font-family: Paytone One, sans-serif;
+    font-size: 18px;
+    padding: 10px 50px 20px 50px;
+}
+
+h3 {
+    padding: 20px 20px 20px 20px;
+    font-family: Paytone One, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1400px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "bloque1"
+            "bloque2"
+            "bloque3";
+        gap: 50px;
+    }
+    main {
+        margin: 50px 375px 100px 375px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .bloque1, .bloque2, .bloque3 {
+        padding: 30px 40px 20px 40px;
+    }
+    .bloque1 img, .bloque2 img, .bloque3 img {
+        height: 35%;
+        width: 45%
+    }
+    .btn {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "bloque1"
+            "bloque2"
+            "bloque3";
+        gap: 50px;
+    }
+    header {
+        padding: 30px 0 0 0;
+        flex-direction: column;
+    }
+    header h1 {
+        padding-bottom: 30px;
+    }
+    nav {
+        background-color: rgb(250, 245, 236);
+        padding: 20px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    main {
+        margin: 50px 225px 100px 225px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .bloque1, .bloque2, .bloque3 {
+        padding: 30px 40px 20px 40px;
+    }
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .bloque1 img, .bloque2 img, .bloque3 img {
+        height: 35%;
+        width: 45%
+    }
+    .btn {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .layout {
+        display: grid;
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+            "bloque1"
+            "bloque2"
+            "bloque3";
+        gap: 50px;
+    }
+    header {
+        text-align: center;
+    }
+    header h1 {
+        font-size: 30px;
+    }
+    nav a {
+        font-size: 28px;
+    }
+    main {
+        margin: 50px 100px 100px 100px;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .bloque1, .bloque2, .bloque3 {
+        padding: 30px 30px 10px 30px;
+    }
+    .bloque1 img, .bloque2 img, .bloque3 img {
+        height: 35%;
+        width: 45%
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .btn {
+        margin-bottom: 20px;
+        font-size: 20px;
+        padding: 0;
+    }
+    header h1 {
+        font-size: 50px;
+    }
+    footer {
+        font-size: 18px;
+    }
+}
